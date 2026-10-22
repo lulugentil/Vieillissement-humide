@@ -1,0 +1,11 @@
+# Versions testées (Python 3.12) avec tests/test_chaine.py et l'application.
+# Python 3.11 ou plus requis. La chaîne passe aussi avec pandas==2.2.3.
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+xgboost==3.4.1
+matplotlib==3.10.8
+streamlit==1.64.0
+scipy==1.17.1      # baseline Fick + Arrhenius (curve_fit), étape suivante
+shap==0.52.0       # analyse SHAP (src/analyse_shap.py)
+pdfplumber==0.11.9 # lecture et digitalisation des PDF (data/construire_dataset.py)

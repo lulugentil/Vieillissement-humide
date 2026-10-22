@@ -1,0 +1,34 @@
+# TEMPLATE - dataset reel vieillissement hygrothermique. UNE LIGNE = UN POINT MESURE.
+# UTF-8, separateur virgule, decimale point. Toute ligne commencant par # est ignoree par verifier_dataset.py.
+# Une courbe (curve_id) = une condition d'une source : memes materiau, T, HR, epaisseur, milieu, etat d'essai, propriete.
+# Toutes les colonnes sont CONSTANTES dans une courbe, sauf Temps_h, Propriete_residuelle, incertitude, type_incertitude, commentaire.
+#
+# curve_id              identifiant unique de la courbe (ex. AUTEUR2019_F4a_70C85HR) - cle anti-fuite du split 80/20
+# material_id           grade aussi precis que la source le permet (systeme resine/durcisseur, grade commercial)
+# famille               epoxy | polyamide | vinylester | polyester | pet | pla | ... (minuscules, vocabulaire libre mais stable)
+# renfort               aucun | verre | carbone | naturel | autre
+# source_doi            DOI exact recopie depuis l'article (10.xxxx/...) ; a defaut HAL:... ISBN:... URL:...
+# source_fig            Fig. 4a | Tab. 2 | p. 7
+# extraction            figure (WebPlotDigitizer) | tableau | texte
+# milieu                vapeur | immersion
+# fluide                immersion uniquement : eau_distillee | eau_deionisee | eau_robinet | eau_de_mer | solution_saline | inconnu ; vide en vapeur
+# Temperature_C         degC - temperature de VIEILLISSEMENT (pas celle de l'essai mecanique)
+# Humidite_HR           % (0-100). Immersion : 100 PAR CONVENTION (hypothese ; l'information reelle est portee par milieu et fluide)
+# Epaisseur_mm          mm - epaisseur de l'eprouvette vieillie
+# etat_essai            humide (essai a la sortie de l'enceinte) | reseche (sechee avant essai) | reconditionne (reequilibree 23 degC / 50 %HR avant essai) | inconnu
+# propriete             E_traction | E_flexion
+# Temps_h               h - duree d'exposition ; 1 j = 24 h ; 1 sem = 168 h ; point initial = 0 EXACTEMENT
+# Propriete_residuelle  E/E0 sans unite, normalise par la valeur t=0 de CETTE courbe ; dans ]0 ; 1.5] ; vaut 1 a t=0
+# incertitude           meme unite que Propriete_residuelle (sigma_E / E0) ; vide si non publiee
+# type_incertitude      ecart_type | min_max | IC95 | digitalisation | inconnu (legende muette) ; vide si incertitude vide
+# E_t_MPa               MPa - module ABSOLU publie a ce point (donnee reelle) ; Propriete_residuelle = E_t_MPa / E0_MPa (valeur calculee) ; vide si seul E/E0 est publie
+# E0_MPa                MPa - module a t=0 de CETTE courbe (donnee publiee, jamais une prediction) ; vide si non publie
+# Tg0_C                 degC - Tg initiale publiee (methode DSC ou DMA a preciser dans commentaire) ; vide si non publiee
+# verification          controle_pdf (valeur relue sur le PDF source) | non_controle (PDF non relu)
+# commentaire           texte libre SANS virgule ni point-virgule
+#
+# REGLES : ne jamais completer une case manquante. Digitaliser les MARQUEURS experimentaux, jamais la courbe d'ajustement des auteurs.
+# --- Deux lignes d'exemple FICTIVES : format uniquement, valeurs inventees, source inexistante. NE PAS DECOMMENTER. ---
+# EX_A,EXEMPLE_epoxy_grade,epoxy,aucun,EXEMPLE_DOI,Fig. 4a,figure,vapeur,,70,85,2.0,humide,E_traction,0,1.0,0.03,ecart_type,3000,3000,,controle_pdf,point t=0 obligatoire : E/E0 = 1 exactement et E0_MPa = valeur de cette courbe
+# EX_B,EXEMPLE_pa6_grade,polyamide,verre,EXEMPLE_DOI,Tab. 2,tableau,immersion,eau_de_mer,40,100,4.0,reseche,E_flexion,720,0.95,0.02,ecart_type,,,,controle_pdf,720 h = 30 j ; HR = 100 par convention ; E0 non publie donc vide ; EX_B doit aussi avoir sa ligne t=0
+curve_id,material_id,famille,renfort,source_doi,source_fig,extraction,milieu,fluide,Temperature_C,Humidite_HR,Epaisseur_mm,etat_essai,propriete,Temps_h,Propriete_residuelle,incertitude,type_incertitude,E_t_MPa,E0_MPa,Tg0_C,verification,commentaire

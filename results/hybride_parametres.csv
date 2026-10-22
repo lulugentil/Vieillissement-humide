@@ -1,0 +1,54 @@
+materiau,type,parametre,valeur,ecart_type,unite,provenance
+PA6_GOODFELLOW,chaine,D(25 °C),4.200698917350277e-13,3.2639660801063414e-14,m²/s,"Fick ajusté sur Le Gac Fig. 1 (25 °C, eau de mer, 2 mm)"
+PA6_GOODFELLOW,chaine,"M∞(25 °C, eau de mer)",10.659644489656444,0.22346083083180363,% masse,idem
+PA6_GOODFELLOW,chaine,Q diffusion,,,kJ/mol,NON IDENTIFIABLE : une seule température mesurée
+PA6_GOODFELLOW,chaine,Ms(80 °C),9.636093411371347,0.20334698370921137,% masse,loi puissance sur Le Gac Tab. 2 (80 °C)
+PA6_GOODFELLOW,chaine,n isotherme,1.8974139564883077,0.07533874126601828,-,idem
+PA6_GOODFELLOW,chaine,Ms(25 °C),11.076192300495974,,% masse,"déduit de M∞(25 °C, Fig. 1) et de n"
+PA6_GOODFELLOW,chaine,dMs/dT,-0.026183616165902313,,%/°C,HYPOTHÈSE : Ms linéaire entre 25 et 80 °C
+PA6_GOODFELLOW,chaine,E/E0 à 0.00 % d'eau,1.0,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_GOODFELLOW,chaine,E/E0 à 0.70 % d'eau,0.9719068299148876,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_GOODFELLOW,chaine,E/E0 à 1.10 % d'eau,0.9719068299148876,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_GOODFELLOW,chaine,E/E0 à 1.70 % d'eau,0.470960652992884,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_GOODFELLOW,chaine,E/E0 à 2.59 % d'eau,0.3939387993581694,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_GOODFELLOW,chaine,E/E0 à 9.30 % d'eau,0.16856032858936795,0.03,-,point mesuré (interpolation monotone PCHIP)
+EPOXY_HEXION_RIMR135,chaine,D(40 °C),2.331921496484816e-13,7.15707284028592e-14,m²/s,Arrhenius sur les D publiés (Gibhardt Fig. 5)
+EPOXY_HEXION_RIMR135,chaine,Q diffusion,47.27609468781743,11.734664558821256,kJ/mol,ajusté ; les auteurs donnent 47.2 kJ/mol
+EPOXY_HEXION_RIMR135,chaine,M∞ immersion : pente en T,0.009494459833795005,0.0024589363957868526,%/°C,"Gibhardt Fig. 5A, 8-50 °C"
+EPOXY_HEXION_RIMR135,chaine,n isotherme,2.1061963110518227,0.11217700264454404,-,"vapeur à 50 °C (Fig. 5B), forme supposée indépendante de T"
+EPOXY_HEXION_RIMR135,chaine,E(M) : pente k,0.02047142508132708,0.008115168690669076,1/%,linéaire sur Gibhardt §3.4 (2 points saturés)
+PA6_AKULON_F223D,chaine,D apparent (36 %HR),2.1852585300126037e-12,8.194621183778244e-14,m²/s,"Fick (M∞ du Tab. 3) ajusté sur Zarbali Fig. 1, 4 mm"
+PA6_AKULON_F223D,chaine,D apparent (57 %HR),1.2921285778873968e-12,1.2071938901560672e-13,m²/s,"Fick (M∞ du Tab. 3) ajusté sur Zarbali Fig. 1, 4 mm"
+PA6_AKULON_F223D,chaine,D apparent (73 %HR),1.5072035881607353e-12,3.8404046926911623e-14,m²/s,"Fick (M∞ du Tab. 3) ajusté sur Zarbali Fig. 1, 4 mm"
+PA6_AKULON_F223D,chaine,D apparent (100 %HR),1.6402804801978055e-12,5.224182822833159e-14,m²/s,"Fick (M∞ du Tab. 3) ajusté sur Zarbali Fig. 1, 4 mm"
+PA6_AKULON_F223D,chaine,ln D = a + b·a_w : b,-0.4248100088710672,0.3853980083163089,-,interpolation de ln D en fonction de l'activité de l'eau
+PA6_AKULON_F223D,chaine,isotherme,,,-,"interpolation monotone (PCHIP) des M∞ du Tab. 3, ±5 % supposé"
+PA6_AKULON_F223D,chaine,E/E0 à 0.00 % d'eau,1.0,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_AKULON_F223D,chaine,E/E0 à 0.51 % d'eau,0.8742076010214812,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_AKULON_F223D,chaine,E/E0 à 0.85 % d'eau,0.7427369686044765,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_AKULON_F223D,chaine,E/E0 à 1.79 % d'eau,0.6403818870695842,0.03,-,point mesuré (interpolation monotone PCHIP)
+PA6_AKULON_F223D,chaine,E/E0 à 5.30 % d'eau,0.2435718458431392,0.03,-,point mesuré (interpolation monotone PCHIP)
+LIN_EPOXY,apparent,M∞,7.31,,% masse,publié (Tab. 4.1 p. 114)
+LIN_EPOXY,apparent,D (épaisseur),2.76e-12,1.656e-13,m²/s,"publié (Tab. 4.1, Dzz) ; non ajusté"
+LIN_EPOXY,apparent,Δ∞ (perte à saturation),0.5835645071624237,0.024906151691602308,-,ajusté sur E(t)
+LIN_EPOXY,apparent,b (forme),2.735402650262786,1.007920184252683,-,"ajusté sur E(t) : b > 0, le module chute plus vite que l'eau n'entre"
+LIN_EPOXY,apparent,écart de modèle (RMS relatif),0.06358817921348285,,-,résidus de l'ajustement sur E(t)
+LIN_ELIUM,apparent,M∞,6.63,,% masse,publié (Tab. 4.1 p. 114)
+LIN_ELIUM,apparent,D (épaisseur),3.12e-12,1.872e-13,m²/s,"publié (Tab. 4.1, Dzz) ; non ajusté"
+LIN_ELIUM,apparent,Δ∞ (perte à saturation),0.5616568143232386,0.016589323109576237,-,ajusté sur E(t)
+LIN_ELIUM,apparent,b (forme),1.7565722040435827,0.5525624896079205,-,"ajusté sur E(t) : b > 0, le module chute plus vite que l'eau n'entre"
+LIN_ELIUM,apparent,écart de modèle (RMS relatif),0.039666551654108866,,-,résidus de l'ajustement sur E(t)
+PA6_TAKMID,apparent,D apparent,9.636227486079806e-12,5.599948822738574e-12,m²/s,ajusté sur E(t) avec h = 7.0 mm
+PA6_TAKMID,apparent,"Δ∞ (perte à saturation, a_w = 1)",0.6107253365167569,0.07982634263137407,-,ajusté sur E(t)
+PA6_TAKMID,apparent,écart de modèle (RMS relatif),0.19916155038839545,,-,résidus de l'ajustement sur E(t)
+EPOXY_WANG_618,apparent,D apparent,1.1258086740790908e-12,8.845613002254494e-13,m²/s,ajusté sur E(t) avec h = 3.0 mm
+EPOXY_WANG_618,apparent,"Δ∞ (perte à saturation, a_w = 1)",0.09458333938741036,0.024401772379368306,-,ajusté sur E(t)
+EPOXY_WANG_618,apparent,n : Δ∞ ∝ a_wⁿ,2.093328095260943,1.0151974618300752,-,ajusté sur les 3 milieux
+EPOXY_WANG_618,apparent,écart de modèle (RMS relatif),0.0226563940221359,,-,résidus de l'ajustement sur E(t)
+PLA_2002D,cinetique,r∞ (plateau),0.45325465646676416,0.0418856699280649,-,"ajusté sur E(t) à 20, 40 et 50 °C"
+PLA_2002D,cinetique,k(40 °C),0.0007438100740980303,0.0001339098875738172,1/h,idem
+PLA_2002D,cinetique,Ea,67.7503421075444,7.946727334064693,kJ/mol,idem (Arrhenius)
+PLA_2002D,cinetique,écart de modèle (RMS relatif),0.030369463345793938,,-,résidus de l'ajustement sur E(t)
+PLA_BQ_FFF,cinetique,r∞ (plateau),0.9044713301966623,0.05106149238393732,-,"ajusté sur E(t), une seule condition"
+PLA_BQ_FFF,cinetique,k,4.7557820498450765,,1/h,NON IDENTIFIABLE : la perte est atteinte avant la première mesure (24 h)
+PLA_BQ_FFF,cinetique,écart de modèle (RMS relatif),0.11248105892775971,,-,résidus de l'ajustement sur E(t)
